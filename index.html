@@ -12,7 +12,7 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<style>
+    <style>
         body { font-family: Arial, Helvetica, sans-serif; }
         @media (max-width: 640px) {
             header .container { max-width: 100%; }
@@ -23,71 +23,29 @@
 
     <!-- Maharashtra Government-inspired Header -->
     <header class="sticky top-0 z-50 bg-white shadow-md border-b border-gray-200">
-        <!-- Official-style top strip -->
         <div class="bg-[#8B0000] text-white">
             <div class="container mx-auto px-4 md:px-6 py-1.5 flex flex-col sm:flex-row justify-between items-center gap-1 text-[11px] md:text-xs">
-                <div class="font-semibold tracking-wide">
-                    Government of Maharashtra
-                </div>
-                <div class="font-medium">
-                    महाराष्ट्र शासन
-                </div>
+                <div class="font-semibold tracking-wide">Government of Maharashtra</div>
+                <div class="font-medium">महाराष्ट्र शासन</div>
             </div>
         </div>
 
-        <!-- Government identity -->
         <div class="container mx-auto px-4 md:px-6 py-3 md:py-4">
             <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
-
                 <div class="flex items-center gap-3 md:gap-4">
-                    <!-- Skill-worker emblem / logo -->
                     <div class="relative flex-shrink-0 w-14 h-14 md:w-16 md:h-16 rounded-full border-2 border-[#8B0000] bg-[#fffaf5] flex items-center justify-center shadow-sm">
                         <div class="absolute inset-1 rounded-full border border-[#d6a15d]"></div>
                         <div class="text-[#8B0000] text-2xl md:text-3xl">
                             <i class="fa-solid fa-person-digging"></i>
                         </div>
                     </div>
-
                     <div>
                         <div class="flex items-center gap-2 flex-wrap">
-                            <h1 class="text-xl md:text-2xl font-extrabold text-gray-900 tracking-tight">
-                                KaushalSetu
-                            </h1>
+                            <h1 class="text-xl md:text-2xl font-extrabold text-gray-900 tracking-tight">KaushalSetu</h1>
                             <span class="hidden sm:inline-block h-5 w-px bg-gray-300"></span>
-                            <span class="text-[11px] md:text-xs font-bold text-[#8B0000] uppercase tracking-wider">
-                                Government Skill Portal
-                            </span>
+                            <span class="text-[11px] md:text-xs font-bold text-[#8B0000] uppercase tracking-wider">Government Skill Portal</span>
                         </div>
-
-                        <p class="text-sm md:text-base font-semibold text-gray-700 mt-0.5">
-                            Maharashtra Skill Outcome &amp; Multi-Sector Tracking
-                        </p>
-
-                        <div class="flex flex-wrap items-center gap-x-3 gap-y-1 mt-1 text-[10px] md:text-xs text-gray-500">
-                            <span>
-                                <i class="fa-solid fa-landmark mr-1 text-[#8B0000]"></i>
-                                Government of Maharashtra
-                            </span>
-                            <span class="hidden sm:inline text-gray-300">|</span>
-                            <span>महाराष्ट्र शासन</span>
-                            <span class="hidden sm:inline text-gray-300">|</span>
-                            <span>SIH26135</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- State portal identity -->
-                <div class="hidden md:flex items-center gap-3 self-end lg:self-center">
-                    <div class="text-right">
-                        <div class="text-xs font-extrabold uppercase tracking-wider text-gray-700">
-                            State Skill Development Portal
-                        </div>
-                        <div class="text-[11px] text-gray-500 mt-0.5">
-                            Outcome &amp; Employment Monitoring
-                        </div>
-                    </div>
-                    <div class="w-10 h-10 rounded-lg bg-gray-50 border border-gray-200 flex items-center justify-center">
-                        <i class="fa-solid fa-building-columns text-[#8B0000] text-lg"></i>
+                        <p class="text-sm md:text-base font-semibold text-gray-700 mt-0.5">Maharashtra Skill Outcome &amp; Multi-Sector Tracking</p>
                     </div>
                 </div>
             </div>
@@ -97,29 +55,15 @@
         <div class="bg-gray-100 border-t border-gray-200">
             <div class="container mx-auto px-4 md:px-6">
                 <div class="flex flex-wrap items-center gap-1 py-1.5">
-                    <button @click="activeTab = 'government'"
-                            :class="activeTab === 'government' ? 'bg-[#8B0000] text-white shadow-sm' : 'text-gray-700 hover:bg-white hover:text-[#8B0000]'"
-                            class="px-3.5 py-2 rounded-md text-xs md:text-sm font-semibold transition">
+                    <button @click="activeTab = 'government'" :class="activeTab === 'government' ? 'bg-[#8B0000] text-white shadow-sm' : 'text-gray-700 hover:bg-white hover:text-[#8B0000]'" class="px-3.5 py-2 rounded-md text-xs md:text-sm font-semibold transition">
                         <i class="fa-solid fa-building-columns mr-1.5"></i> Government
                     </button>
-
-                    <button @click="activeTab = 'sectors'"
-                            :class="activeTab === 'sectors' ? 'bg-[#8B0000] text-white shadow-sm' : 'text-gray-700 hover:bg-white hover:text-[#8B0000]'"
-                            class="px-3.5 py-2 rounded-md text-xs md:text-sm font-semibold transition">
+                    <button @click="activeTab = 'sectors'" :class="activeTab === 'sectors' ? 'bg-[#8B0000] text-white shadow-sm' : 'text-gray-700 hover:bg-white hover:text-[#8B0000]'" class="px-3.5 py-2 rounded-md text-xs md:text-sm font-semibold transition">
                         <i class="fa-solid fa-layer-group mr-1.5"></i> Job Sectors
                     </button>
-
-                    <button @click="activeTab = 'whatsapp'"
-                            :class="activeTab === 'whatsapp' ? 'bg-emerald-600 text-white shadow-sm' : 'text-gray-700 hover:bg-white hover:text-emerald-700'"
-                            class="px-3.5 py-2 rounded-md text-xs md:text-sm font-semibold transition flex items-center">
+                    <button @click="activeTab = 'whatsapp'" :class="activeTab === 'whatsapp' ? 'bg-emerald-600 text-white shadow-sm' : 'text-gray-700 hover:bg-white hover:text-emerald-700'" class="px-3.5 py-2 rounded-md text-xs md:text-sm font-semibold transition flex items-center">
                         <i class="fa-brands fa-whatsapp mr-1.5 text-base"></i> WhatsApp Tracking
                         <span class="ml-1.5 bg-emerald-700 text-white text-[10px] px-1.5 py-0.5 rounded-full" x-text="responses.length"></span>
-                    </button>
-
-                    <button @click="activeTab = 'tp'"
-                            :class="activeTab === 'tp' ? 'bg-[#8B0000] text-white shadow-sm' : 'text-gray-700 hover:bg-white hover:text-[#8B0000]'"
-                            class="px-3.5 py-2 rounded-md text-xs md:text-sm font-semibold transition">
-                        <i class="fa-solid fa-school mr-1.5"></i> Training Provider
                     </button>
                 </div>
             </div>
@@ -129,11 +73,8 @@
     <!-- Main Container -->
     <main class="container mx-auto px-6 py-8">
 
-        <!-- ========================================== -->
         <!-- VIEW 1: WHATSAPP DIRECT CAMPAIGN & INGESTION -->
-        <!-- ========================================== -->
         <div x-show="activeTab === 'whatsapp'" class="space-y-6">
-            
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
                 
                 <!-- Left: Outbound Campaign Dispatch Form -->
@@ -145,13 +86,8 @@
                             </h3>
                             <p class="text-xs text-gray-500">Dispatch tracking surveys directly to registered trainee numbers.</p>
                         </div>
-                        <span class="text-[10px] font-bold bg-emerald-100 text-emerald-800 px-2.5 py-1 rounded-full flex items-center gap-1">
-                            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                            Backend Active
-                        </span>
                     </div>
 
-                    <!-- Status Notification Banner -->
                     <div x-show="statusMsg" x-transition class="p-3 rounded-lg text-xs font-semibold"
                          :class="statusSuccess ? 'bg-emerald-100 text-emerald-800 border border-emerald-300' : 'bg-red-100 text-red-800 border border-red-300'"
                          x-text="statusMsg"></div>
@@ -159,7 +95,7 @@
                     <form @submit.prevent="triggerRealWhatsApp" class="space-y-3">
                         <div>
                             <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Trainee Mobile Number (with country code 91)</label>
-                            <input type="text" x-model="surveyForm.phone" required placeholder="e.g. 919876543210" class="w-full border border-gray-300 rounded-lg p-2.5 text-sm bg-gray-50 font-mono focus:ring-2 focus:ring-emerald-500 outline-none">
+                            <input type="text" x-model="surveyForm.phone" required placeholder="e.g. 919876543210" class="w-full border border-gray-300 rounded-lg p-2.5 text-sm bg-gray-50 font-mono outline-none">
                         </div>
                         <div class="grid grid-cols-2 gap-3">
                             <div>
@@ -173,8 +109,6 @@
                                     <option>IT & AI Services</option>
                                     <option>Solar & Green Energy</option>
                                     <option>Healthcare</option>
-                                    <option>Semiconductors</option>
-                                    <option>Construction</option>
                                 </select>
                             </div>
                         </div>
@@ -182,572 +116,92 @@
                             <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Completed Course</label>
                             <input type="text" x-model="surveyForm.course" required class="w-full border border-gray-300 rounded-lg p-2 text-sm">
                         </div>
-
-                        <!-- Action Buttons -->
-                        <div class="grid grid-cols-1 gap-2 pt-1">
-                            <button type="submit" :disabled="isSending" class="w-full bg-emerald-600 hover:bg-emerald-700 disabled:opacity-50 text-white font-bold text-sm py-3 px-4 rounded-xl flex items-center justify-center space-x-2 transition shadow">
-                                <i class="fa-brands fa-whatsapp text-lg"></i>
-                                <span x-text="isSending ? 'Sending to Trainee WhatsApp...' : 'Send Questions to Trainee WhatsApp'"></span>
-                            </button>
-                        </div>
+                        <button type="submit" :disabled="isSending" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm py-3 px-4 rounded-xl flex items-center justify-center space-x-2 transition shadow">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            <span x-text="isSending ? 'Sending...' : 'Send Questions to Trainee WhatsApp'"></span>
+                        </button>
                     </form>
-
-                    <!-- Manual Reply Ingestion Form -->
-                    <div class="mt-4 pt-4 border-t border-gray-100">
-                        <label class="block text-xs font-bold text-gray-700 uppercase mb-2">Manual Signal Backup</label>
-                        <div class="space-y-2">
-                            <input type="text" x-model="manualReplyText" placeholder="Paste response text or salary details..." class="w-full border border-gray-300 rounded-lg p-2 text-xs">
-                            <div class="flex gap-2">
-                                <button @click="submitManualResponse(true)" class="flex-1 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 font-bold text-xs py-2 px-3 rounded-lg border border-emerald-200 transition">
-                                    <i class="fa-solid fa-check mr-1"></i> Log Employed
-                                </button>
-                                <button @click="submitManualResponse(false)" class="flex-1 bg-amber-50 hover:bg-amber-100 text-amber-800 font-bold text-xs py-2 px-3 rounded-lg border border-amber-200 transition">
-                                    <i class="fa-solid fa-triangle-exclamation mr-1"></i> Log Seeking (Skill Gap)
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Instant Simulator for Judge Demos -->
-                    <div class="pt-2">
-                        <span class="text-[11px] text-gray-400 block mb-1">Simulate Trainee Inbound Responses:</span>
-                        <div class="grid grid-cols-3 gap-1.5">
-                            <button @click="simulateInbound('Joined Mahindra & Mahindra as CNC Machinist (₹19,000/mo)', true)" class="bg-gray-100 hover:bg-gray-200 text-gray-700 text-[10px] font-semibold p-1.5 rounded border text-center">Salaried</button>
-                            <button @click="simulateInbound('Opened EV Battery Servicing unit at Bhosari', true)" class="bg-gray-100 hover:bg-gray-200 text-gray-700 text-[10px] font-semibold p-1.5 rounded border text-center">Self-Employed</button>
-                            <button @click="simulateInbound('Still unemployed. Need placement interview assistance.', false)" class="bg-gray-100 hover:bg-gray-200 text-gray-700 text-[10px] font-semibold p-1.5 rounded border text-center">Seeking</button>
-                        </div>
-                    </div>
                 </div>
 
-                <!-- Right: Live Real-Time Feed Table of Incoming Responses -->
-                <div class="lg:col-span-7 bg-white p-6 rounded-2xl shadow-sm border border-gray-200 flex flex-col h-[610px]">
+                <!-- Right: Live Real-Time Feed Table -->
+                <div class="lg:col-span-7 bg-white p-6 rounded-2xl shadow-sm border border-gray-200 flex flex-col h-[500px]">
                     <div class="flex justify-between items-center border-b pb-3 mb-3">
-                        <div>
-                            <h3 class="font-bold text-gray-800 text-lg flex items-center">
-                                <i class="fa-solid fa-database text-indigo-600 mr-2"></i> Live Ingested Outcome Signals
-                            </h3>
-                            <p class="text-xs text-gray-500">Real-time telemetry listener updates upon recipient response.</p>
-                        </div>
-                        <div class="flex items-center space-x-2">
-                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2.5 py-1 rounded-full font-bold" x-text="responses.length + ' Recorded'"></span>
-                        </div>
+                        <h3 class="font-bold text-gray-800 text-lg">Live Ingested Outcome Signals</h3>
+                        <span class="bg-indigo-100 text-indigo-800 text-xs px-2.5 py-1 rounded-full font-bold" x-text="responses.length + ' Recorded'"></span>
                     </div>
-
                     <div class="flex-1 overflow-y-auto space-y-3 pr-1">
                         <template x-for="(item, idx) in responses" :key="idx">
-                            <div class="p-3.5 rounded-xl border transition-all duration-200"
-                                 :class="item.verified ? 'bg-emerald-50/50 border-emerald-200' : 'bg-amber-50/50 border-amber-200'">
+                            <div class="p-3.5 rounded-xl border" :class="item.verified ? 'bg-emerald-50 border-emerald-200' : 'bg-amber-50 border-amber-200'">
                                 <div class="flex justify-between items-start">
-                                    <div class="flex items-center space-x-2">
-                                        <i class="fa-brands fa-whatsapp text-emerald-600 text-base"></i>
-                                        <span class="font-bold text-gray-900 text-xs font-mono" x-text="item.phone"></span>
-                                        <span class="text-[10px] text-gray-400" x-text="item.timestamp"></span>
-                                    </div>
-                                    <span class="text-[10px] font-bold px-2 py-0.5 rounded-full"
-                                          :class="item.verified ? 'bg-emerald-100 text-emerald-800' : 'bg-amber-100 text-amber-800'"
-                                          x-text="item.verified ? 'Employed / Self-Employed' : 'Searching for Job (Skill Gap)'"></span>
+                                    <span class="font-bold text-gray-900 text-xs font-mono" x-text="item.phone"></span>
+                                    <span class="text-[10px] font-bold px-2 py-0.5 rounded-full" :class="item.verified ? 'bg-emerald-100 text-emerald-800' : 'bg-amber-100 text-amber-800'" x-text="item.verified ? 'Employed' : 'Seeking'"></span>
                                 </div>
-                                <div class="mt-2 text-xs font-medium text-gray-800 bg-white p-2.5 rounded-lg border border-gray-100 shadow-sm" x-text="item.text"></div>
+                                <div class="mt-2 text-xs font-medium text-gray-800 bg-white p-2 rounded-lg border" x-text="item.text"></div>
                             </div>
                         </template>
                     </div>
                 </div>
 
             </div>
-
         </div>
 
-        <!-- ========================================== -->
-        <!-- VIEW 2: JOB SECTORS & SKILL DEMAND BOARD   -->
-        <!-- ========================================== -->
+        <!-- VIEW 2: JOB SECTORS -->
         <div x-show="activeTab === 'sectors'" class="space-y-6" style="display: none;">
             <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-200">
-                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
-                    <div>
-                        <h2 class="text-xl font-bold text-gray-800">Key Employment Sectors & Skill Gap Analytics</h2>
-                        <p class="text-xs text-gray-500">Live reconciliation between verified trainees, employer vacancies, and wage rates.</p>
-                    </div>
-                    <span class="text-xs bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-lg font-semibold border border-indigo-100">
-                        <i class="fa-solid fa-chart-simple mr-1"></i> Industry Disaggregation Active
-                    </span>
-                </div>
-
+                <h2 class="text-xl font-bold text-gray-800 mb-4">Key Employment Sectors & Skill Gap Analytics</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                     <template x-for="sec in sectorData" :key="sec.name">
-                        <div class="p-5 rounded-xl border border-gray-200 bg-white hover:shadow-md transition">
-                            <div class="flex justify-between items-start mb-3">
-                                <div class="p-2.5 rounded-lg text-white" :class="sec.colorBg">
-                                    <i :class="sec.icon" class="text-lg"></i>
-                                </div>
-                                <span class="text-[11px] font-bold px-2 py-0.5 rounded-full"
-                                      :class="sec.gap > 0 ? 'bg-red-100 text-red-700' : 'bg-green-100 text-green-700'"
-                                      x-text="sec.gap > 0 ? 'Shortage: ' + sec.gap.toLocaleString() : 'Surplus Supply'"></span>
-                            </div>
+                        <div class="p-5 rounded-xl border border-gray-200 bg-white">
                             <h3 class="font-bold text-gray-900 text-sm" x-text="sec.name"></h3>
                             <p class="text-xs text-gray-500 mt-0.5" x-text="'Top Role: ' + sec.topRole"></p>
-
-                            <div class="mt-4 pt-3 border-t border-gray-100 space-y-1.5 text-xs">
-                                <div class="flex justify-between">
-                                    <span class="text-gray-500">Industry Openings:</span>
-                                    <span class="font-bold text-gray-800" x-text="sec.demand.toLocaleString()"></span>
-                                </div>
-                                <div class="flex justify-between">
-                                    <span class="text-gray-500">Trained Supply:</span>
-                                    <span class="font-bold text-gray-800" x-text="sec.supply.toLocaleString()"></span>
-                                </div>
-                                <div class="flex justify-between">
-                                    <span class="text-gray-500">Median Wage:</span>
-                                    <span class="font-bold text-emerald-600" x-text="'₹' + sec.medianWage.toLocaleString() + '/mo'"></span>
-                                </div>
-                                <div class="flex justify-between">
-                                    <span class="text-gray-500">6-Month Retention:</span>
-                                    <span class="font-bold text-indigo-600" x-text="sec.retention + '%'"></span>
-                                </div>
-                            </div>
                         </div>
                     </template>
                 </div>
             </div>
         </div>
 
-        <!-- ========================================== -->
-        <!-- VIEW 3: GOVERNMENT POLICY MAKER VIEW        -->
-        <!-- ========================================== -->
-        <div x-show="activeTab === 'government'" class="space-y-6" style="display: none;">
-            <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex flex-wrap gap-4 items-center justify-between">
-                <div class="flex items-center space-x-2 text-gray-600 font-medium text-sm">
-                    <i class="fa-solid fa-filter"></i> <span>State Filters:</span>
-                </div>
-                <div class="flex gap-4 flex-wrap">
-                    <select x-model="district" @change="updateMetrics" class="border border-gray-300 rounded-lg px-3 py-2 text-sm bg-gray-50">
-                        <option>All Maharashtra</option>
-                        <option>Pune</option>
-                        <option>Nagpur</option>
-                        <option>Thane</option>
-                        <option>Aurangabad</option>
-                    </select>
-                    <select x-model="scheme" @change="updateMetrics" class="border border-gray-300 rounded-lg px-3 py-2 text-sm bg-gray-50">
-                        <option>Scheme: All Schemes</option>
-                        <option>MSSDS (State Mission)</option>
-                        <option>PMKVY 4.0</option>
-                        <option>Apprenticeship Scheme</option>
-                    </select>
-                </div>
-                <div class="text-xs bg-green-100 text-green-800 font-semibold px-3 py-1 rounded-full flex items-center gap-1">
-                    <i class="fa-solid fa-shield-check"></i> EPFO Live Sync Active
-                </div>
-            </div>
+    </main>
 
-            <!-- Stats -->
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <div class="text-gray-500 text-sm font-medium">Total Skilled Trainees</div>
-                    <div class="text-3xl font-extrabold text-indigo-900 mt-2" x-text="metrics.total"></div>
-                    <div class="text-xs text-green-600 mt-2 font-medium">Synced via Unified Trainee ID</div>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <div class="text-gray-500 text-sm font-medium">Verified Placement Rate</div>
-                    <div class="text-3xl font-extrabold text-emerald-600 mt-2" x-text="metrics.placement"></div>
-                    <div class="text-xs text-gray-400 mt-2">EPFO + WhatsApp Confirmed</div>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <div class="text-gray-500 text-sm font-medium">Avg Monthly Starting Wage</div>
-                    <div class="text-3xl font-extrabold text-blue-600 mt-2" x-text="metrics.wage"></div>
-                    <div class="text-xs text-gray-400 mt-2">Formal & gig normalized</div>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <div class="text-gray-500 text-sm font-medium">Top Skill Gap Flagged</div>
-                    <div class="text-xl font-extrabold text-red-600 mt-2">Solar & EV Diagnostics</div>
-                    <div class="text-xs text-red-500 mt-2">Requires Curriculum Revision</div>
-                </div>
-            </div>
-
-            <!-- Charts Grid -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h3 class="font-bold text-gray-800 text-lg mb-4">Placement Verification Channels</h3>
-                    <div class="h-64"><canvas id="verificationChart"></canvas></div>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h3 class="font-bold text-gray-800 text-lg mb-4">Demand vs. Supply Across Sectors</h3>
-                    <div class="h-64"><canvas id="gapChart"></canvas></div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ======================================================= -->
-        <!-- VIEW 4: TRAINING PROVIDER ITI TRACKER & REAL SCHEMES   -->
-        <!-- ======================================================= -->
-        <div x-show="activeTab === 'tp'" style="display: none;" class="space-y-8">
-            
-            <!-- Institute Header -->
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <div class="flex flex-col md:flex-row justify-between md:items-center border-b pb-4 mb-4 gap-4">
-                    <div>
-                        <h2 class="text-xl font-bold text-gray-800">Government ITI - Aundh, Pune</h2>
-                        <p class="text-sm text-gray-500">Center Code: ITI-MH-PUN-0042</p>
-                    </div>
-                    <span class="bg-emerald-100 text-emerald-800 font-bold text-xs px-3 py-1.5 rounded-full w-fit">Grade A Center (88% Placement)</span>
-                </div>
-
-                <h3 class="font-bold text-gray-700 text-md mb-3">Batch Outcome Tracking (Post-Training 6 Months)</h3>
-                <div class="overflow-x-auto">
-                    <table class="w-full text-left text-sm text-gray-600 min-w-[700px]">
-                        <thead class="bg-gray-100 text-gray-700 uppercase text-xs">
-                            <tr>
-                                <th class="py-3 px-4">Batch ID</th>
-                                <th class="py-3 px-4">Course Name</th>
-                                <th class="py-3 px-4">Enrolled</th>
-                                <th class="py-3 px-4">EPFO Verified</th>
-                                <th class="py-3 px-4">WhatsApp Responded</th>
-                                <th class="py-3 px-4">Avg Salary</th>
-                                <th class="py-3 px-4">Status</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-gray-100">
-                            <tr>
-                                <td class="py-3 px-4 font-mono text-xs">2025-CNC-B1</td>
-                                <td class="py-3 px-4 font-medium text-gray-900">CNC Machine Operator</td>
-                                <td class="py-3 px-4">40</td>
-                                <td class="py-3 px-4 text-green-600 font-bold">32 (80%)</td>
-                                <td class="py-3 px-4 text-indigo-600 font-semibold">38 (95%)</td>
-                                <td class="py-3 px-4">₹18,500</td>
-                                <td class="py-3 px-4"><span class="bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded whitespace-nowrap">High Outcome</span></td>
-                            </tr>
-                            <tr>
-                                <td class="py-3 px-4 font-mono text-xs">2025-ELE-B3</td>
-                                <td class="py-3 px-4 font-medium text-gray-900">Industrial Electrician</td>
-                                <td class="py-3 px-4">50</td>
-                                <td class="py-3 px-4 text-green-600 font-bold">35 (70%)</td>
-                                <td class="py-3 px-4 text-indigo-600 font-semibold">44 (88%)</td>
-                                <td class="py-3 px-4">₹16,000</td>
-                                <td class="py-3 px-4"><span class="bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded whitespace-nowrap">Satisfactory</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <!-- Maharashtra Government Verified Schemes & Skill Matching Portal -->
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-200">
-                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6 border-b pb-4">
-                    <div>
-                        <div class="flex items-center gap-2">
-                            <i class="fa-solid fa-landmark-flag text-indigo-600 text-xl"></i>
-                            <h2 class="text-xl font-bold text-gray-900">Maharashtra Govt. Direct Schemes & Apprenticeship Drives</h2>
-                        </div>
-                        <p class="text-xs text-gray-500 mt-1">Official Skill & Employment Department initiatives with Direct Benefit Transfer (DBT) monthly stipends.</p>
-                    </div>
-
-                    <!-- Filter Control for Trainees -->
-                    <div class="flex items-center gap-3">
-                        <label class="text-xs font-bold text-gray-600 uppercase whitespace-nowrap">Filter by Trade:</label>
-                        <select x-model="selectedSkillFilter" class="border border-gray-300 rounded-lg px-3 py-2 text-xs font-semibold bg-gray-50 focus:ring-2 focus:ring-indigo-500 outline-none">
-                            <option value="All">All Official Schemes</option>
-                            <option value="CNC Operator">CNC Operator / Machinist</option>
-                            <option value="Electrician">Electrician / Wireman</option>
-                            <option value="EV Tech">Automotive & EV Tech</option>
-                            <option value="Solar Installer">Solar PV Rooftop Tech</option>
-                            <option value="Healthcare Aide">Healthcare Assistant (GDA)</option>
-                        </select>
-                    </div>
-                </div>
-
-                <!-- Schemes Cards Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <template x-for="(scheme, index) in filteredSchemes" :key="index">
-                        <div class="border border-gray-200 rounded-xl p-5 hover:shadow-lg transition-all duration-200 flex flex-col justify-between bg-gradient-to-b from-white to-gray-50/50">
-                            <div>
-                                <div class="flex justify-between items-start gap-2 mb-3">
-                                    <span class="text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-md"
-                                          :class="scheme.badgeColor" x-text="scheme.badgeText"></span>
-                                    <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded" x-text="scheme.stipend"></span>
-                                </div>
-                                <h3 class="font-bold text-base text-gray-900" x-text="scheme.title"></h3>
-                                <div class="flex items-center text-xs text-indigo-700 font-semibold mt-1">
-                                    <i class="fa-solid fa-building-columns mr-1.5 text-gray-400"></i>
-                                    <span x-text="scheme.agency"></span>
-                                </div>
-                                <p class="text-xs text-gray-600 mt-2 leading-relaxed" x-text="scheme.description"></p>
-
-                                <div class="mt-4 pt-3 border-t border-gray-100 space-y-2 text-xs">
-                                    <div class="flex items-center justify-between">
-                                        <span class="text-gray-500">Eligible Trade:</span>
-                                        <span class="font-bold text-gray-800 bg-gray-100 px-2 py-0.5 rounded" x-text="scheme.requiredSkill"></span>
-                                    </div>
-                                    <div class="flex items-center justify-between">
-                                        <span class="text-gray-500">Target Region:</span>
-                                        <span class="font-semibold text-gray-700" x-text="scheme.location"></span>
-                                    </div>
-                                    <div class="flex items-center justify-between">
-                                        <span class="text-gray-500">MahaSwayam Quota:</span>
-                                        <span class="font-extrabold text-indigo-600" x-text="scheme.vacancies + ' Seats'"></span>
-                                    </div>
-                                    <div class="flex items-center justify-between text-[11px] text-gray-500 italic">
-                                        <span>Disbursement:</span>
-                                        <span class="font-medium text-gray-700" x-text="scheme.disbursement"></span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="mt-5 pt-3 border-t border-gray-100 flex items-center gap-2">
-                                <button @click="applyForScheme(scheme)" 
-                                        :disabled="scheme.applied"
-                                        class="w-full py-2.5 px-3 rounded-lg text-xs font-bold transition flex items-center justify-center gap-1.5 shadow-sm"
-                                        :class="scheme.applied ? 'bg-gray-200 text-gray-500 cursor-not-allowed' : 'bg-indigo-600 hover:bg-indigo-700 text-white'">
-                                    <i :class="scheme.applied ? 'fa-solid fa-check' : 'fa-solid fa-id-card'"></i>
-                                    <span x-text="scheme.applied ? 'Enrolled via MahaDBT' : 'Register via MahaSwayam ID'"></span>
-                                </button>
-                            </div>
-                        </div>
-                    </template>
-                </div>
-
-                <!-- Empty State Fallback -->
-                <div x-show="filteredSchemes.length === 0" class="text-center py-10">
-                    <i class="fa-solid fa-file-circle-question text-3xl text-gray-300 mb-2"></i>
-                    <p class="text-sm font-bold text-gray-500">No active state scheme found for this trade filter.</p>
-                </div>
-            </div>
-
-        </div>
-</main>
-
-    <!-- Application Script -->
     <script>
         function unifiedApp() {
             return {
                 activeTab: 'whatsapp',
-                district: 'All Maharashtra',
-                scheme: 'Scheme: All Schemes',
-                manualReplyText: '',
                 isSending: false,
                 statusMsg: '',
-                statusSuccess: true,
-                
-                selectedSkillFilter: 'All',
-
-                surveyForm: {
-                    phone: '919876543210',
-                    name: 'Rahul Patil',
-                    sector: 'Automotive & EV',
-                    course: 'CNC Machine Operator'
-                },
-metrics: {
-                    total: '1,24,500',
-                    placement: '68.4%',
-                    wage: '₹16,450',
-                    score: '74/100'
-                },
-
-                // Real Maharashtra Government Skill Schemes
-                companySchemes: [
-                    {
-                        title: 'Mukhyamantri Yuva Karya Prashikshan Yojana (CMYKPY)',
-                        agency: 'Dept of Skill, Employment & Innovation / MahaSwayam',
-                        badgeText: 'Govt. 6-Month On-Job Training',
-                        badgeColor: 'bg-orange-100 text-orange-800',
-                        description: 'Direct 6-month on-the-job industrial apprenticeship in registered manufacturing units. 100% state-funded monthly stipend.',
-                        requiredSkill: 'CNC Operator',
-                        stipend: '₹8,000/mo (ITI/Diploma)',
-                        location: 'Pune, Chhatrapati Sambhajinagar, Nashik',
-                        vacancies: 450,
-                        disbursement: '100% Direct DBT via MahaDBT',
-                        applied: false
-                    },
-                    {
-                        title: 'Maharashtra Apprenticeship Promotion Scheme (MAPS)',
-                        agency: 'Directorate of Vocational Education & Training (DVET)',
-                        badgeText: 'State MAPS Reimbursed',
-                        badgeColor: 'bg-emerald-100 text-emerald-800',
-                        description: 'Government reimburses 75% of stipend (up to ₹5,000) directly to industries for hiring ITI pass apprentices under Apprentices Act.',
-                        requiredSkill: 'Electrician',
-                        stipend: '₹12,500 - ₹15,000/mo',
-                        location: 'MIDC Chakan, Bhosari, Butibori Nagpur',
-                        vacancies: 280,
-                        disbursement: 'Govt Share ₹5,000 + Industry Base',
-                        applied: false
-                    },
-                    {
-                        title: 'Pramod Mahajan Kaushalya Va Udyojakta Abhiyan (PMKUVA)',
-                        agency: 'Maharashtra State Skill Development Society (MSSDS)',
-                        badgeText: 'MSSDS Flagship Scheme',
-                        badgeColor: 'bg-blue-100 text-blue-800',
-                        description: 'Special bridge skilling courses for emerging trades like EV Diagnostics and Solar Installation with Rojgar Melava recruitment.',
-                        requiredSkill: 'EV Tech',
-                        stipend: 'Free Training + ₹18,000/mo Job',
-                        location: 'Pune Auto Cluster & Thane MIDC',
-                        vacancies: 190,
-                        disbursement: 'MSSDS Empaneled Corporate Placement',
-                        applied: false
-                    },
-                    {
-                        title: 'PM Surya Ghar - Green Kaushal Initiative (MahaSwayam)',
-                        agency: 'MEDA (Maharashtra Energy Dev Agency) & MSSDS',
-                        badgeText: 'State Renewable Mission',
-                        badgeColor: 'bg-amber-100 text-amber-800',
-                        description: 'Priority placement scheme linking ITI Solar Technicians to empanelled rooftop solar installation vendors across Maharashtra.',
-                        requiredSkill: 'Solar Installer',
-                        stipend: '₹16,500/mo Base Pay',
-                        location: 'Nagpur, Amravati & Solapur',
-                        vacancies: 320,
-                        disbursement: 'State Solar Mission Partner Vendor',
-                        applied: false
-                    },
-                    {
-                        title: 'Mukhyamantri Maha-Aarogya Kaushalya Vikas',
-                        agency: 'Public Health Department & MSSDS',
-                        badgeText: 'Health Skilling Mission',
-                        badgeColor: 'bg-rose-100 text-rose-800',
-                        description: 'Specialized healthcare assistant and OT technician absorption drive in civil and private multispeciality hospital networks.',
-                        requiredSkill: 'Healthcare Aide',
-                        stipend: '₹14,000 - ₹17,000/mo',
-                        location: 'Mumbai Suburban, Thane & Pune',
-                        vacancies: 160,
-                        disbursement: 'Hospital Consortium Direct Payroll',
-                        applied: false
-                    }
-                ],
-
-                get filteredSchemes() {
-                    if (this.selectedSkillFilter === 'All') {
-                        return this.companySchemes;
-                    }
-                    return this.companySchemes.filter(s => s.requiredSkill === this.selectedSkillFilter);
-                },
-
-                applyForScheme(scheme) {
-                    scheme.applied = true;
-                    alert(`Application successfully registered under ${scheme.title}!\nYour State Trainee Profile has been submitted to ${scheme.agency}.`);
-                },
-
+                statusSuccess: false,
+                surveyForm: { phone: '', name: '', course: '', sector: 'Automotive & EV' },
+                manualReplyText: '',
                 responses: [
-                    { phone: '919822334455', text: 'Working at Force Motors as CNC Operator. Salary ₹19,200.', timestamp: '09:42 AM', verified: true },
-                    { phone: '919421112233', text: 'Self-employed: Set up EV 2-Wheeler repair shop in Chinchwad.', timestamp: '10:15 AM', verified: true },
-                    { phone: '919923445566', text: 'Completed course but still searching for local job near Pune. Missing: Advanced PLC programming.', timestamp: '11:05 AM', verified: false }
+                    { phone: '919876543210', text: 'Joined Mahindra & Mahindra as CNC Machinist (₹19,000/mo)', verified: true, timestamp: '10:42 AM' }
                 ],
-
                 sectorData: [
-                    { name: 'Automotive & EV', icon: 'fa-solid fa-car-battery', colorBg: 'bg-blue-600', demand: 18500, supply: 12000, gap: 6500, medianWage: 18500, retention: 79, topRole: 'Battery Pack Technician' },
-                    { name: 'IT & AI Services', icon: 'fa-solid fa-microchip', colorBg: 'bg-indigo-600', demand: 24000, supply: 27000, gap: -3000, medianWage: 23000, retention: 84, topRole: 'Junior Cloud Assistant' },
-                    { name: 'Solar & Green Energy', icon: 'fa-solid fa-solar-panel', colorBg: 'bg-emerald-600', demand: 14000, supply: 5500, gap: 8500, medianWage: 16800, retention: 76, topRole: 'Rooftop PV Installer' },
-                    { name: 'Healthcare & Nursing', icon: 'fa-solid fa-heart-pulse', colorBg: 'bg-rose-600', demand: 19500, supply: 11000, gap: 8500, medianWage: 17200, retention: 88, topRole: 'Emergency Medical Aide' },
-                    { name: 'Semiconductors & PCB', icon: 'fa-solid fa-memory', colorBg: 'bg-amber-600', demand: 8500, supply: 2200, gap: 6300, medianWage: 21500, retention: 82, topRole: 'SMT Operator' },
-                    { name: 'Modern Construction', icon: 'fa-solid fa-trowel-bricks', colorBg: 'bg-slate-600', demand: 12000, supply: 14500, gap: -2500, medianWage: 14000, retention: 62, topRole: 'Pre-cast Concrete Mason' }
+                    { name: 'Automotive & EV', topRole: 'EV Battery Technician', gap: 1200, demand: 5400, supply: 4200, medianWage: 18500 },
+                    { name: 'IT & AI Services', topRole: 'AI Data Annotator', gap: 850, demand: 3200, supply: 2350, medianWage: 22000 }
                 ],
-
-                init() {
-                    this.initCharts();
-                },
-
-                // Real Dispatch via Background Python pywhatkit Engine
                 async triggerRealWhatsApp() {
                     this.isSending = true;
                     this.statusMsg = '';
-
                     try {
-                        const response = await fetch('http://127.0.0.1:8000/api/send-real-whatsapp', {
+                        let res = await fetch('/api/send-real-whatsapp', {
                             method: 'POST',
                             headers: { 'Content-Type': 'application/json' },
                             body: JSON.stringify(this.surveyForm)
                         });
-
-                        const res = await response.json();
-                        if (response.ok) {
+                        let data = await res.json();
+                        if(data.status === 'success') {
                             this.statusSuccess = true;
-                            this.statusMsg = `Delivery in progress! WhatsApp Web will auto-open in ~14s and dispatch message to +${this.surveyForm.phone}.`;
+                            this.statusMsg = 'WhatsApp survey task triggered successfully in background!';
                         } else {
                             this.statusSuccess = false;
-                            this.statusMsg = 'Backend Error: ' + res.detail;
+                            this.statusMsg = 'Error: ' + data.detail;
                         }
-                    } catch (err) {
+                    } catch(e) {
                         this.statusSuccess = false;
-                        this.statusMsg = 'Backend server offline! Please run "python main.py" in your terminal first.';
-                    } finally {
-                        this.isSending = false;
-                        setTimeout(() => { this.statusMsg = ''; }, 10000);
+                        this.statusMsg = 'Network Error: ' + e.message;
                     }
-                },
-
-                // Manual Ingestion
-                submitManualResponse(isEmployed) {
-                    if (!this.manualReplyText.trim()) {
-                        alert('Please type or paste the response message first.');
-                        return;
-                    }
-                    this.responses.unshift({
-                        phone: '+91 ' + this.surveyForm.phone.slice(-10),
-                        text: this.manualReplyText,
-                        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-                        verified: isEmployed
-                    });
-                    this.manualReplyText = '';
-                },
-
-                simulateInbound(text, isEmployed) {
-                    const randomSuffix = Math.floor(1000 + Math.random() * 9000);
-                    this.responses.unshift({
-                        phone: `+91 98765 ${randomSuffix}`,
-                        text: text,
-                        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-                        verified: isEmployed
-                    });
-                },
-
-
-                updateMetrics() {
-                    let total = 124500;
-                    let placement = 68.4;
-                    let wage = 16450;
-
-                    if (this.district === 'Pune') { total = 32150; placement = 81.2; wage = 19800; }
-                    else if (this.district === 'Nagpur') { total = 18500; placement = 62.1; wage = 14200; }
-                    else if (this.district === 'Thane') { total = 28400; placement = 75.5; wage = 17500; }
-                    else if (this.district === 'Aurangabad') { total = 12000; placement = 58.0; wage = 13500; }
-
-                    if (this.scheme === 'PMKVY 4.0') placement += 1.5;
-                    else if (this.scheme === 'Apprenticeship Scheme') placement += 8.0;
-
-                    this.metrics.total = total.toLocaleString('en-IN');
-                    this.metrics.placement = placement.toFixed(1) + '%';
-                    this.metrics.wage = '₹' + wage.toLocaleString('en-IN');
-                },
-
-                initCharts() {
-                    setTimeout(() => {
-                        const ctx1 = document.getElementById('verificationChart');
-                        if (ctx1) {
-                            new Chart(ctx1.getContext('2d'), {
-                                type: 'doughnut',
-                                data: {
-                                    labels: ['WhatsApp Direct Survey', 'EPFO Live Confirmed', 'Unverified'],
-                                    datasets: [{
-                                        data: [54, 26, 8],
-                                        backgroundColor: ['#25D366', '#10B981', '#EF4444'],
-                                        borderWidth: 0
-                                    }]
-                                },
-                                options: { responsive: true, maintainAspectRatio: false }
-                            });
-                        }
-
-                        const ctx2 = document.getElementById('gapChart');
-                        if (ctx2) {
-                            new Chart(ctx2.getContext('2d'), {
-                                type: 'bar',
-                                data: {
-                                    labels: ['Auto & EV', 'IT & AI', 'Green Solar', 'Healthcare', 'Semiconductors'],
-                                    datasets: [
-                                        { label: 'Market Demand', data: [18500, 24000, 14000, 19500, 8500], backgroundColor: '#4F46E5', borderRadius: 4 },
-                                        { label: 'Trained Supply', data: [12000, 27000, 5500, 11000, 2200], backgroundColor: '#F59E0B', borderRadius: 4 }
-                                    ]
-                                },
-                                options: { responsive: true, maintainAspectRatio: false }
-                            });
-                        }
-                    }, 200);
+                    this.isSending = false;
                 }
-            };
+            }
         }
     </script>
 </body>
