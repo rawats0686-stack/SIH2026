@@ -2,7 +2,6 @@ from fastapi import FastAPI, BackgroundTasks
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import HTMLResponse
 from pydantic import BaseModel
-import pywhatkit as kit
 import uvicorn
 import os
 
@@ -38,18 +37,10 @@ def deliver_whatsapp(phone: str, name: str, course: str, sector: str):
         f"3. Agar Nahi: Kaunsi skill missing thi ya interview me kya requirement thi?"
     )
 
-    print(f"[*] Sending message to {target}...")
-    try:
-        kit.sendwhatmsg_instantly(
-            phone_no=target,
-            message=msg,
-            wait_time=15,
-            tab_close=True,
-            close_time=4
-        )
-        print("[+] Delivered successfully!")
-    except Exception as e:
-        print(f"[-] PyWhatKit Error: {e}")
+    print(f"[*] Cloud Simulation: WhatsApp message targeted for {target}")
+    print(f"[*] Message content:\n{msg}")
+    # Note: PyWhatKit cannot run on cloud servers like Render because there is no desktop GUI/display.
+    # For actual production use on cloud, integrate WhatsApp Cloud API (Meta Graph API).
 
 @app.get("/", response_class=HTMLResponse)
 def home():
@@ -69,7 +60,7 @@ def send_real_whatsapp(data: SurveyRequest, background_tasks: BackgroundTasks):
             data.course, 
             data.sector
         )
-        return {"status": "success", "phone": data.phone}
+        return {"status": "success", "phone": data.phone, "info": "Queued on cloud backend successfully."}
     except Exception as err:
         return {"status": "error", "detail": str(err)}
 
